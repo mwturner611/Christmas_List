@@ -1,0 +1,22 @@
+body {
+    
+  }
+  
+#header {
+    text-align: center;
+}
+
+.col-4 {
+    display: flex;
+  justify-content: center;
+}
+
+form {
+    width: 50%;
+}
+
+  h1 {
+    color: #9C2706;
+    margin-left: 20px;
+    text-align: center;
+  }

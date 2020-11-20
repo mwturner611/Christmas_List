@@ -3,9 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/christmasList.js"></script>
+    <title>Christmas List</title>
+    
 </head>
 <body>
-    <h1>It works!</h1>
+    <div class="container">
+
+        <div id="header">
+            <h1>Turner/Mollenhour Christmas List!</h1>
+        </div>
+        
+
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <form>
+                    <div class="form-group">
+                    <label for="giftDescr">Gift Description</label>
+                    <input type="text" class="form-control" id="giftInput" aria-describedby="emailHelp" placeholder="Enter a brief gift description">
+                    </div>
+                    <div class="form-group">
+                        <label for="giftDescr">My Name</label>
+                        <input type="text" class="form-control" id="nameInput" aria-describedby="emailHelp" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="giftDescr">URL: optional</label>
+                        <input type="text" class="form-control" id="urlInput" aria-describedby="emailHelp" placeholder="www.giftInfo.com">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div> 
+            <div class="col-4"></div>   
+        </div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-4">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+                      <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">List group item heading</h5>
+                        <small>3 days ago</small>
+                      </div>
+                      <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <small>Donec id elit non mi porta.</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                      <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">List group item heading</h5>
+                        <small class="text-muted">3 days ago</small>
+                      </div>
+                      <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <small class="text-muted">Donec id elit non mi porta.</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                      <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">List group item heading</h5>
+                        <small class="text-muted">3 days ago</small>
+                      </div>
+                      <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <small class="text-muted">Donec id elit non mi porta.</small>
+                    </a>
+                  </div>
+            </div>
+            <div class="col-4">
+                
+            </div>
+            <div class="col-2"></div>
+        </div>
+
+    </div>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </body>
 </html>
