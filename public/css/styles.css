@@ -1,22 +1,39 @@
-body {
-    
-  }
-  
 #header {
     text-align: center;
 }
 
 .col-4 {
     display: flex;
+    justify-content: center;
+}
+
+.col-6 {
+  display: flex;
   justify-content: center;
 }
 
 form {
     width: 50%;
+    margin-bottom: 10px;
+}
+
+.list-group {
+   width: auto;
+   margin-top: 10px;
+}
+
+.list-group-item {
+  margin-bottom: 5px;
 }
 
   h1 {
     color: #9C2706;
+    margin-left: 20px;
+    text-align: center;
+  }
+
+  h2 {
+    color: #06089c;
     margin-left: 20px;
     text-align: center;
   }
