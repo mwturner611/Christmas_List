@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="./js/christmasList.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    
     <title>Christmas List</title>
     
 </head>
@@ -24,21 +23,37 @@
       <div class="row">
         <div class="col-4"></div>
         <div class="col-4">
-            <form>
-                <div class="form-group">
-                <label for="giftDescr">Gift Description (one per submission)</label>
-                <input type="text" class="form-control" id="giftInput" aria-describedby="emailHelp" placeholder="Enter a single gift description">
-                </div>
+            <form id="form">
                 <div class="form-group">
                     <label for="giftDescr">My Name</label>
-                    <input type="text" class="form-control" id="nameInput" aria-describedby="emailHelp" placeholder="Enter your name">
+                    <select class="custom-select" id="nameInput">
+                      <option selected>Choose...</option>
+                      <option value="Ava">Ava</option>
+                      <option value="Brusco">Brusco</option>
+                      <option value="Bryan">Bryan</option>
+                      <option value="Esther">Esther</option>
+                      <option value="Gatlin">Gatlin</option>
+                      <option value="Jaron">Jaron</option>
+                      <option value="Lincoln">Lincoln</option>
+                      <option value="Matt M. (Earl)">Matt M. (Earl)</option>
+                      <option value="Matt T.">Matt T.</option>
+                      <option value="Mimi">Mimi</option>
+                      <option value="Rachel">Rachel</option>
+                      <option value="Sarah Grace">Sarah Grace</option>
+                      <option value="Will">Will</option>
+                    </select>
+                    <!-- <input type="text" class="form-control" id="nameInput" aria-describedby="emailHelp" placeholder="Enter your name"> -->
                 </div>
+                <div class="form-group">
+                  <label for="giftDescr">Gift I'd like (one per submission)</label>
+                  <input type="text" class="form-control" id="giftInput" aria-describedby="emailHelp" placeholder="Enter a single gift description">
+                  </div>
                 <div class="form-group">
                     <label for="giftDescr">URL: optional</label>
                     <input type="text" class="form-control" id="urlInput" aria-describedby="emailHelp" placeholder="www.gift.com">
                 </div>
                 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" id="btn" class="btn btn-success">Submit</button>
             </form>
         </div> 
         <div class="col-4"></div>   
@@ -48,80 +63,14 @@
       <div class="row justify-content-center">
         
         <div id="left" class="col-sm-6 justify-content-center">
-          <h2>Up for Grabs</h2>
-          <div class="list-group">
-            <div class="list-group-item list-group-item-action align-items-start">
-                <div class="d-flex w-100">
-                  <h5 class="mb-1">Sarah Grace</h5>
-                </div>
-                <p class="mb-1">Grand Piano</p>
-                <small>www.google.com</small>
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Check if You're claiming this one!</label>
-                </div>
-            </div>
-            <div class="list-group-item list-group-item-action align-items-start">
-              <div class="d-flex w-100">
-                <h5 class="mb-1">Sarah Grace</h5>
-              </div>
-              <p class="mb-1">Grand Piano</p>
-              <small>www.google.com</small>
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check if You're claiming this one!</label>
-              </div>
-            </div>
-            <div class="list-group-item list-group-item-action  align-items-start">
-              <div class="d-flex w-100">
-                <h5 class="mb-1">Sarah Grace</h5>
-              </div>
-              <p class="mb-1">Grand Piano</p>
-              <small>www.google.com</small>
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check if You're claiming this one!</label>
-              </div>
-            </div>
+          <h2>Secret Santa</h2>
+          <div id="secretSanta" class="list-group">
           </div>
         </div>
 
         <div id="right" class="col-sm-6">
-          <h2>Claimed</h2>
-          <div class="list-group w-100">
-            <div class="list-group-item list-group-item-action flex-column align-items-start">
-                <div class="d-flex w-100 justify-content-between">
-                  <h5 class="mb-1">Sarah Grace</h5>
-                </div>
-                <p class="mb-1">Grand Piano</p>
-                <small>www.google.com</small>
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Check if You're claiming this one!</label>
-                </div>
-            </div>
-            <div class="list-group-item list-group-item-action flex-column align-items-start">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Sarah Grace</h5>
-              </div>
-              <p class="mb-1">Grand Piano</p>
-              <small>www.google.com</small>
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check if You're claiming this one!</label>
-              </div>
-            </div>
-            <div class="list-group-item list-group-item-action flex-column align-items-start">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Sarah Grace</h5>
-              </div>
-              <p class="mb-1">Grand Piano</p>
-              <small>www.google.com</small>
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check if You're claiming this one!</label>
-              </div>
-            </div>
+          <h2>Teens & Tweens</h2>
+          <div id='kids' class="list-group w-100">
           </div>
 
         </div>
@@ -132,6 +81,9 @@
       <!-- container -->
     </div>
     
-    <link rel="stylesheet" href="./css/styles.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="./js/christmasList.js"></script>
 </body>
 </html>
