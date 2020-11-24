@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+
     // get all gifts in db and display
     $.ajax('/api/gifts', {
         type: 'GET'
@@ -29,17 +30,29 @@ $(document).ready(function(){
                     .text(res[i].url)
                     .attr('href',res[i].url)
                     .appendTo(outerDiv);
-                var ckDiv = $('<div></div>')
-                    .addClass('form-check')
-                    .appendTo(outerDiv);
-                var input = $('<input type="checkbox" name="checkbox">')
-                    .addClass('form-check-input')
-                    .attr('id', res[i].id)
-                    .appendTo(ckDiv)
-                var label = $('<label></label>')
-                    .addClass('form-check-label')
-                    .text(' Claim this gift for '+ res[i].person)
-                    .appendTo(ckDiv);}
+                    // if (res[i].purchase){
+                    //     var h5 = $('<h5>Already purchased</h5>')
+                    //         .appendTo(outerDiv);
+                    // } else {
+                    //     var ckDiv = $('<div></div>')
+                    //         .addClass('form-check')
+                    //         .appendTo(outerDiv);
+                    //     var button = $('<button type="submit" class="btn btn-success claimBtn">Click here to claim this gift</button>')
+                    //         .attr('onClick','claimed(' + res[i].id + ')')
+                    //         .appendTo(ckDiv);
+                    // }
+                }   
+                // var ckDiv = $('<div></div>')
+                //     .addClass('form-check')
+                //     .appendTo(outerDiv);
+                // var input = $('<input type="checkbox" name="checkbox">')
+                //     .addClass('form-check-input')
+                //     .attr('onClick', '')
+                //     .appendTo(ckDiv)
+                // var label = $('<label></label>')
+                //     .addClass('form-check-label')
+                //     .text(' Claim this gift for '+ res[i].person)
+                //     .appendTo(ckDiv);}
                 else{
                     var outerDiv = $('<div></div>')
                     .addClass('list-group-item list-group-item-action flex-column align-items-start')
@@ -70,17 +83,19 @@ $(document).ready(function(){
     //         console.log(this.id)
     //     }
     // });
-    // $('input[name=checkbox]').change(function(event){
+    
+    // $(document).on("click",'.claimBtn', function(event){
     //     event.preventDefault();
-    //     var id=$(this).data('id');
-    //     var purchased=$(this).data('purchased');
+    //     var id=$(this)[0].id;
+    //     var purchased= 1;
 
-    //     console.log("id");
-    //     console.log("purchased");
-    //     $.ajax('/api/gift', {
+    //     $.ajax('/api/gift/'+ id, {
     //         type: 'PUT',
-    //         purchased: purchased,
-    //         id: id
+    //         purchased: purchased
+    //     })
+    //     .then(function(res){
+    //         location.reload();
+    //         console.log(res[0]);
     //     })
     // });
 
