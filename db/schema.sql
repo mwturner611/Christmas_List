@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS christmaslist;
+-- DROP DATABASE IF EXISTS christmaslist;
 
-CREATE DATABASE christmaslist;
+-- CREATE DATABASE christmaslist;
